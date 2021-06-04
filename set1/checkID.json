@@ -19,16 +19,16 @@
     ],
     "version": "10.0.19041",
     "python_build": [
-        "default",
-        "Apr 13 2021 15:08:03"
+        "tags/v3.9.5:0a7dcbd",
+        "May  3 2021 17:27:52"
     ],
-    "python_compiler": "MSC v.1916 64 bit (AMD64)",
+    "python_compiler": "MSC v.1928 64 bit (AMD64)",
     "python_implementation(": "CPython",
-    "python_version(": "3.8.8",
+    "python_version(": "3.9.5",
     "python_version_tuple": [
         "3",
-        "8",
-        "8"
+        "9",
+        "5"
     ],
     "cpu_count": 12
 }
