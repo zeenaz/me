@@ -6,3 +6,5 @@ cd..  back to the upper direction
 
 if there's missing python things
 $pip install (the thing)[]
+
+check the log carefully and no panic
