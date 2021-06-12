@@ -7,14 +7,17 @@ def is_odd(a_number):
 
     Look into modulo division using the '%' operator as one way of doing this.
     """
-    return None
+    if a_number % 2 == 0:
+        return False
+    else:
+        return True
 
 
 def fix_it(moves=True, should_move=True):
     """Decide what to do.
 
     Using the engineering flowchart (in week2 folder of the CODE1161-2019
-    repo engineeringFlowchart.png) for the rules, return the apropriate
+    repo engineeringFlowchart.png) for the rules, return the appropriate
     response to the input parameters.
     Use conditional statements: if, else, elif etc.
     This function should return either:
@@ -22,10 +25,15 @@ def fix_it(moves=True, should_move=True):
     "Duct Tape"
     "No Problem"
 
-    Most people write this function with 4 return statements. 
+    Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+    if moves == should_move:
+        return "No Problem"
+    elif moves and not should_move:
+        return "WD-40"
+    elif not moves and should_move:
+        return "Duct Tape"
 
 
 def loops_1a():
@@ -35,7 +43,12 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    # stars = ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+    stars = []
+    for i in range(10):
+        stars.append("*")
+
+    return stars
 
 
 def loops_1c(number_of_items=5, symbol="#"):
@@ -45,7 +58,11 @@ def loops_1c(number_of_items=5, symbol="#"):
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
-    return None
+    stars = []
+    for i in range(number_of_items):
+        stars.append(symbol)
+
+    return stars
 
 
 def loops_2():
@@ -66,7 +83,15 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    # stars = ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
+    stars = []
+    for j in range(10):
+        lines = []
+        for i in range(10):
+            lines.append("*")
+        stars.append(lines)
+
+    return stars
 
 
 def loops_3():
@@ -90,7 +115,14 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    num_box = []
+    for j in range(10):
+        lines = []
+        for i in range(10):
+            lines.append(str(j))
+        num_box.append(lines)
+
+    return num_box
 
 
 def loops_4():
@@ -110,7 +142,14 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    num_box = []
+    for j in range(10):
+        lines = []
+        for i in range(10):
+            lines.append(str(i))
+        num_box.append(lines)
+
+    return num_box
 
 
 def loops_5():
@@ -137,7 +176,14 @@ def loops_5():
         "There are {} green bottles".format(8)
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    num_box = []
+    for i in range(10):
+        lines = []
+        for j in range(5):
+            lines.append(f"(i{i}, j{j})")
+        num_box.append(lines)
+
+    return num_box
 
 
 def loops_6():
