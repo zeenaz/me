@@ -206,7 +206,17 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    num_box = []
+    m = 0
+    for j in range(10):
+        m = m + 1
+        lines = []
+        for i in range(m):
+            lines.append(str(i))
+
+        num_box.append(lines)
+
+    return num_box
 
 
 def loops_7():
@@ -230,7 +240,19 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
-    return None
+    stars = []
+    for j in range(5):
+        lines = []
+        for i in range(9):
+            if 5 * i - 4 * j > 20:
+                lines.append(" ")
+            elif 5 * i + 4 * j < 20:
+                lines.append(" ")
+            else:
+                lines.append("*")
+        stars.append(lines)
+
+    return stars
 
 
 def little_printer(some_kind_of_list, exercise_name):
