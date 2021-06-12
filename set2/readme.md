@@ -10,3 +10,5 @@ you can type other words in the collection, they will be the a part of the colle
 
 how to use map?
 what is list?
+
+//////// How to do Loop7 ///////// Why my math way didn't work?

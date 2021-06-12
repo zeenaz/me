@@ -241,12 +241,12 @@ def loops_7():
     lots of diagrams!
     """
     stars = []
-    for j in range(5):
+    for j in range(1, 6):
         lines = []
         for i in range(9):
-            if 5 * i - 4 * j > 20:
+            if 5 / 4 * i - j > 5:
                 lines.append(" ")
-            elif 5 * i + 4 * j < 20:
+            elif 5 / 4 * i + j < 5:
                 lines.append(" ")
             else:
                 lines.append("*")
