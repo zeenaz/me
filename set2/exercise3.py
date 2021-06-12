@@ -40,7 +40,7 @@ def loops_1a():
     """Make 10 stars.
 
     Using a for loop
-    return a list of 10 items, each one a string with exacly one star in it.
+    return a list of 10 items, each one a string with exactly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
     # stars = ["*", "*", "*", "*", "*", "*", "*", "*", "*", "*"]
@@ -55,7 +55,7 @@ def loops_1c(number_of_items=5, symbol="#"):
     """Respond to variables.
 
     Using any method, return a list of number_of_items items, each one a
-    string with exacly one symbol in it.
+    string with exactly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
     stars = []
@@ -69,7 +69,7 @@ def loops_2():
     """Make a big square starfield.
 
     return a list of 10 items, each one a list of 10 items,
-    each one of those, a string with exacly one star in it.
+    each one of those, a string with exactly one star in it.
     E.g.: [
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
