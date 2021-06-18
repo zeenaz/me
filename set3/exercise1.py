@@ -20,7 +20,6 @@ def loop_ranger(start, stop=None, step=1):
         if next_num >= stop:
             break
         list_num.append(next_num)
-    print(list_num)
     return list_num
 
 
@@ -43,7 +42,7 @@ def lone_ranger(start, stop, step):
         if next_num >= stop:
             break
         list_num.append(next_num)
-    print(list_num)
+    # print(list_num)
     return list_num
 
 
@@ -61,7 +60,7 @@ def two_step_ranger(start, stop):
         if next_num >= stop:
             break
         list_num.append(next_num)
-    print(list_num)
+    # print(list_num)
     return list_num
 
 
@@ -73,17 +72,14 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    # list_num = []
     length = high - low
-
+    # print(f"when asking range, the length is {length}")
     for i in range(length):
         next_num = low + i
         if next_num == high:
             break
-        # list_num.append(next_num)
-    # print(list_num)
+
     return next_num
-    # list_num
 
 
 def not_number_rejector(message):
@@ -112,8 +108,18 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
+    try:
+        not_number_rejector(low)
+        not_number_rejector(high)
+        result = stubborn_asker(low, high)
+    except Exception as e:
+        print(e)
+    # print(f"in this zone, low is {low}, high is {high}")
+    # print(f"result number is {result}")
+    return result
 
+
+super_asker(0, 3)
 
 if __name__ == "__main__":
     # this section does a quick test on your results and prints them nicely.
