@@ -31,9 +31,9 @@ def fix_it(moves=True, should_move=True):
     if moves == should_move:
         return "No Problem"
     elif moves and not should_move:
-        return "WD-40"
+        return "Duct Tape"  # Duct Tape
     elif not moves and should_move:
-        return "Duct Tape"
+        return "WD-40"  # WD-40
 
 
 def loops_1a():
