@@ -24,7 +24,9 @@ def exampleGuessingGame():
 
     while not guessed:
         guessedNumber = int(input("Guess a number: "))
-        print("You guessed {},".format(guessedNumber),)
+        print(
+            "You guessed {},".format(guessedNumber),
+        )
         if guessedNumber == actualNumber:
             print("You got it!! It was {}".format(actualNumber))
             guessed = True
