@@ -42,7 +42,7 @@ def lone_ranger(start, stop, step):
         if next_num >= stop:
             break
         list_num.append(next_num)
-    # print(list_num)
+
     return list_num
 
 
@@ -73,7 +73,6 @@ def stubborn_asker(low, high):
     Look up the docs for input
     """
     length = high - low
-    # print(f"when asking range, the length is {length}")
     for i in range(length):
         next_num = low + i
         if next_num == high:
