@@ -9,4 +9,3 @@ to decide which to way to use, you needs to consider serval aspects:
 2. the usage of your methods, in what conditions?
    a. how frequent the method will be used?
    b. what conditions are your "win conditions"?
-3.
