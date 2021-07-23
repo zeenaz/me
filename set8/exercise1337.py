@@ -39,14 +39,16 @@ def int_list_please():
     return nublist
 
 
-def string_list_please() -> list:
+def string_list_please():
     """Returns a list of strings, any string are fine."""
-    return None
+    mylist = ["dog", "cat", "pet"]
+    return mylist
 
 
-def dictionary_please() -> dict:
+def dictionary_please():
     """Returns a dictionary, anything you like."""
-    return None
+    dict{'Age': 8}
+    return 'Age'
 
 
 def is_it_5(some_number) -> bool:
