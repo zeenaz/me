@@ -56,27 +56,29 @@ def is_it_5(some_number):
     return well_is_it
 
 
-def take_five(some_number) -> int:
+def take_five(some_number):
     """Subtracts 5 from some_number."""
-    return None
+    return some_number - 5
 
 
-def greet(name="Towering Timmy") -> str:
+def greet(name="Towering Timmy"):
     """Return a greeting.
     return a string of "Well hello, " and the name argument.
     E.g. if given as "Towering Timmy" it should
          return "Well hello, Towering Timmy"
     """
-    return None
+    return f"Hello {name}"
 
 
-def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
+def one_counter(input_list=[1, 4, 1, 5, 1, 1]):
     """Count the number of 1s in the input_list.
     Return an integer.
     TIP: the test will use a different input_list, so don't just return 2
     """
-    count = None
-
+    count = 0
+    for n in input_list:
+        if n is 1:
+            count += 1
     return count
 
 
