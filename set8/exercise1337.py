@@ -82,16 +82,18 @@ def one_counter(input_list=[1, 4, 1, 5, 1, 1]):
     return count
 
 
-def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
+def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]):
     """Count the number of times search_for_this shows up in the input_list.
     Return an integer.
     """
-    count = None
-
+    count = 0
+    for n in input_list:
+        if n is search_for_this:
+            count += 1
     return count
 
 
-def fizz_buzz() -> List:
+def fizz_buzz():
     """Do the fizzBuzz.
 
     This is the most famous basic programming test of all time!
@@ -111,7 +113,15 @@ def fizz_buzz() -> List:
     """
     fizz_buzz_list = []
     # your code here
-
+    for i in range(1, 101):
+        if i % 3 is 0 and i % 5 is 0:
+            fizz_buzz_list.append("FizzBuzz")
+        elif i % 3 is 0:
+            fizz_buzz_list.append("Fizz")
+        elif i % 5 is 0:
+            fizz_buzz_list.append("Buzz")
+        else:
+            fizz_buzz_list.append(i)
     return fizz_buzz_list
 
 
