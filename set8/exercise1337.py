@@ -125,7 +125,7 @@ def fizz_buzz():
     return fizz_buzz_list
 
 
-def set_it_on_fire(input_string="very naughty boy") -> str:
+def set_it_on_fire(input_string="very naughty boy"):
     """Interleave the input_string with the 🔥 emoji.
 
     Given any string, interleave it with 🔥. Also make it be upper case.
@@ -137,7 +137,9 @@ def set_it_on_fire(input_string="very naughty boy") -> str:
     TIP: make sure that you have a 🔥 on both ends of the string.
     """
 
-    return None
+    bars = list(input_string)
+    bars = "🔥".join(bars)
+    return "🔥" + bars.upper() + "🔥"
 
 
 def pet_filter(letter="a") -> List:
