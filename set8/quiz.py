@@ -9,25 +9,25 @@ import string
 import time
 
 
-def string_please() -> str:
+def string_please():
     """Returns a string, anything you like."""
     string_test = "I am a string"
     return string_test
 
 
-def list_please() -> list:
+def list_please():
     """Returns a list, anything you like."""
     list_test = [3, 2, 1]
     return list_test
 
 
-def dictionary_please() -> dict:
+def dictionary_please():
     """Returns a dictionary, anything you like."""
     dict = {'food': 'jelly'}
     return 'food'
 
 
-def is_it_5(some_number) -> bool:
+def is_it_5(some_number):
     """Returns True if the argument passed is 5, otherwise returns False."""
     if some_number == 5:
         return some_number
@@ -35,7 +35,7 @@ def is_it_5(some_number) -> bool:
         return False
 
 
-def take_five(some_number) -> int:
+def take_five(some_number):
     """Subtracts 5 from some_number."""
     try:
         test_out = some_number - 5
