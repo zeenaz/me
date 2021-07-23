@@ -67,7 +67,7 @@ def greet(name="Towering Timmy"):
     E.g. if given as "Towering Timmy" it should
          return "Well hello, Towering Timmy"
     """
-    return f"Hello {name}"
+    return f"Well hello, {name}"
 
 
 def one_counter(input_list=[1, 4, 1, 5, 1, 1]):
@@ -163,7 +163,7 @@ def pet_filter(letter="a") -> List:
     return filtered
 
 
-def best_letter_for_pets() -> str:
+def best_letter_for_pets():
     """Return the letter that is present at least once in the most pet names.
 
     Reusing the pet_filter, find the letter that gives the longest list of pets
@@ -184,7 +184,7 @@ def best_letter_for_pets() -> str:
     return most_popular_letter
 
 
-def make_filler_text_dictionary() -> Dict:
+def make_filler_text_dictionary():
     """Make a dictionary of random words filler text.
     There is a random word generator here:
     https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=4
@@ -211,6 +211,11 @@ def make_filler_text_dictionary() -> Dict:
 
     url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
     wd = {}
+    for i in range(3, 8):
+        wd[i] = []
+        for _ in range(4):
+            r = requests.get(url + str(i))
+            wd[i].append(r.text)
 
     return wd
 
@@ -227,13 +232,16 @@ def random_filler_text(number_of_words=200) -> str:
     """
 
     my_dict = make_filler_text_dictionary()
-
     words = []
+    for _ in range(number_of_words):
+        word_length = random.randint(3, 6)
+        word_index = random.randint(0, 2)
+        words.append(my_dict[word_length][word_index])
 
     return " ".join(words)
 
 
-def fast_filler(number_of_words=200) -> str:
+def fast_filler(number_of_words=200):
     """Makes filler text, but really fast.
 
     This time, the first time the code runs, save the dictionary returned
@@ -248,9 +256,27 @@ def fast_filler(number_of_words=200) -> str:
     If you get this one to work, you are a Very Good Programmer™!
     """
 
-    fname = "dict_cache.json"
+    filename = "dict_cache.json"
+    if os.path.isfile(filename):
+        with open(filename, "r") as inFile:
+            my_dict = json.load(inFile)
+    else:
+        my_dict = make_filler_text_dictionary()
+        with open(filename, "w") as outFile:
+            json.dump(my_dict, outFile)
+    words = []
 
-    return None
+    for _ in range(number_of_words):
+        word_length = random.randint(3, 6)
+        word_index = random.randint(0, 2)
+        try:
+            words.append(my_dict[word_length][word_index])
+        except KeyError:
+            words.append(my_dict[str(word_length)][word_index])
+
+    paragraph = " ".join(words)
+    paragraph = paragraph[0].upper() + paragraph[1:]
+    return paragraph + "."
 
 
 if __name__ == "__main__":
