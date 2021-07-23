@@ -47,13 +47,12 @@ def string_list_please():
 
 def dictionary_please():
     """Returns a dictionary, anything you like."""
-    dict{'Age': 8}
-    return 'Age'
+    return {"dog": None}
 
 
-def is_it_5(some_number) -> bool:
+def is_it_5(some_number):
     """Returns True if the argument passed is 5, otherwise returns False."""
-    well_is_it = None
+    well_is_it = some_number == 5
     return well_is_it
 
 
