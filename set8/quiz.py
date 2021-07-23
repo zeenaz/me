@@ -11,28 +11,37 @@ import time
 
 def string_please() -> str:
     """Returns a string, anything you like."""
-    return "I'm a string!"
+    string_test = "I am a string"
+    return string_test
 
 
 def list_please() -> list:
     """Returns a list, anything you like."""
-    return [None, None]
+    list_test = [3, 2, 1]
+    return list_test
 
 
 def dictionary_please() -> dict:
     """Returns a dictionary, anything you like."""
-    return {"jelly": None}
+    dict = {'food': 'jelly'}
+    return 'food'
 
 
 def is_it_5(some_number) -> bool:
     """Returns True if the argument passed is 5, otherwise returns False."""
-    well_is_it = some_number == 5
-    return well_is_it
+    if some_number == 5:
+        return some_number
+    else:
+        return False
 
 
 def take_five(some_number) -> int:
     """Subtracts 5 from some_number."""
-    return some_number - 5
+    try:
+        test_out = some_number - 5
+    except:
+        print('Error returned')
+    return test_out
 
 
 def greet(name="Towering Timmy"):
@@ -75,7 +84,7 @@ def fizz_buzz():
         the multiples of five print "Buzz". For numbers which are
         multiples of both three and five print "FizzBuzz"."
     from https://blog.codinghorror.com/why-cant-programmers-program/
-    
+
     Return a list that has an integer if the number isn't special, 
     and a string if it is. E.g. 
         [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 
@@ -158,7 +167,7 @@ def make_filler_text_dictionary():
     >>> r = requests.get(url)
     >>> r.text # will get you a string, something like this:
     >>> "occipitosphenoidal"
-    
+
     Return a dictionary where the keys are numbers, and the values are lists of
     words. e.g.
     { 
@@ -168,7 +177,7 @@ def make_filler_text_dictionary():
         7: ['aaaaaaa', 'bbbbbbb', 'ccccccc']
     }
     Use the API to get the 3 words.
-    
+
     The dictionary should have the numbers between 3 and 7 inclusive.
     (i.e. 3, 4, 5, 6, 7 and 3 words for each)
     TIP: you'll need the requests library
