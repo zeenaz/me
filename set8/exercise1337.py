@@ -157,7 +157,9 @@ def pet_filter(letter="a") -> List:
     ]
     # fmt: on
     filtered = []
-
+    for pet in pets:
+        if letter in pet:
+            filtered.append(pet)
     return filtered
 
 
@@ -172,8 +174,13 @@ def best_letter_for_pets() -> str:
     import string
 
     the_alphabet = string.ascii_lowercase
+    longest = -1
     most_popular_letter = ""
-
+    for letter in the_alphabet:
+        x = len(pet_filter(letter))
+        if x > longest:
+            longest = x
+            most_popular_letter = letter
     return most_popular_letter
 
 
